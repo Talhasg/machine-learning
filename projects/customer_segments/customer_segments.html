@@ -17914,6 +17914,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
+<ul>
+<li>There are four data point which are outliers for more than one feature; they are 66, 75, 128 and 154. Data points which are outliers in more than one sample needs to be removed as they are more likely to be true outliers. </li>
+<li>No data points were added in outliers section by me.</li>
+</ul>
 
 </div>
 </div>
@@ -18301,10 +18305,10 @@ BMGK1qyf0E0AAAAASUVORK5CYII=
 <li>Variance in first four principal components: 0.9314</li>
 </ul>
 <ul>
-<li>First PC relies heavily on varition in Milk, Grocery and Detergent_Paper. Grocery and detergent are linearly related so first PC captures information of feature that are linearly related</li>
-<li>Second PC communicated information about Fresh, Frozen and Delicatseen; in other words second PC is giving i nformation about other three features than first PC</li>
-<li>Third PC contains information about fresh and Detergent paper</li>
-<li>Fourth PC contains information abaout Frozen feature mainly</li>
+<li>First PC relies heavily on varition in Milk, Grocery and Detergent_Paper. Grocery and detergent are linearly related so first PC captures information of feature that are linearly related. First PC can well seperate customers of Supermarket</li>
+<li>Second PC communicated information about Fresh, Frozen and Delicatseen; in other words second PC is giving in formation about other three features than first PC and will seperate customers of grocery store</li>
+<li>Third PC contains information about fresh and Detergent paper and will seperate customers of local produce.</li>
+<li>Fourth PC contains information abaout Frozen feature mainly and will sperate customers of grocery store</li>
 </ul>
 
 </div>
@@ -19645,8 +19649,8 @@ AKCDEfQBAAAAQAf7v/4ZYfdmjazsAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>k-Means - Simple and easy to use and always converges</li>
-<li><p>Gaussian Mixture Models - Defines soft segments to handle overlapping clusters</p>
+<li>k-Means - Simple and easy to use and always converges. Because of simplicity, K-Means is faster than GMM</li>
+<li><p>Gaussian Mixture Models - Defines soft segments and is best suited for overlapping clusters. Elements belong to different clusters with some probability. GMM does not converge and can get stuck. As there ae infinfite number of configuration, GMM takes more time.</p>
 </li>
 <li><p>We know that first component of data has information about three features and second component has information about other three features, so we can use simple algorithm like K-mean to segment data.</p>
 </li>
@@ -20543,8 +20547,8 @@ AAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Segment 0 shows high demand for Milk, Grocery and Detergent_Paper</li>
-<li>Segment 1 shows high demand for Fresh, Frozen and Delicateseen</li>
+<li>Segment 0 shows high demand for Milk, Grocery and Detergent_Paper. Establishment - Supermarket</li>
+<li>Segment 1 shows high demand for Fresh, Frozen and Delicateseen. Establishment - Local produce</li>
 </ul>
 
 </div>
@@ -20642,7 +20646,7 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Changing delivery service will affect different customers differently. For the data provided for the project,  Segment 0 customers spend more on Grocery, Milk and Detergent_paper as compared to fresh products and are most likely segments not to be impacted by change of delivery service. Segment 1 on the other hand have customers which get fresh products and are likely to be impacted by changing delivery service. So the wholesale distributor needs to segment data as discussed and change delivery service only for Segment 0</li>
+<li>Changing delivery service will affect different customers differently. For the data provided for the project,  Segment 0 customers spend more on Grocery, Milk and Detergent_paper as compared to fresh products and are most likely segments not to be impacted by change of delivery service. Segment 1 on the other hand have customers which get fresh products and are likely to be impacted by changing delivery service. So the wholesale distributor needs to segment data in two; one for those customers which are spending more on Grocery, Milk and Detergent_paper and other segment should contain customers spending more on Fresh products. Once segments are done only customers from Frozen segment, whcih are statistically unlikely to be affected by change should be distributed with new delivery service. </li>
 </ul>
 
 </div>
